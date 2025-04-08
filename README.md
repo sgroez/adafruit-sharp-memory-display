@@ -22,10 +22,10 @@ Python program to render linux /dev/fb0 framebuffer on adafruit 400x240 sharp me
 - select SPI
 - confirm by selecting yes
 
-### Switch KMS to FKMS
+### Setup Framebuffer Without Display Attached
 
-- open /boot/firmware/config.txt
-- change line "dtoverlay=vc4-kms-v3d" to "vc4-fkms-v3d"
+- open /boot/firmware/cmdline.txt
+- add 'video=HDMI-A-1:400x240M@30D'
 
 ### Install Adafruit Sharp Memory Display Library
 
