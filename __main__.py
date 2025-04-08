@@ -8,8 +8,8 @@ import mmap
 
 # Framebuffer parameters
 BUFFER_PATH = "/dev/fb0"
-BUFFER_WIDTH = 720
-BUFFER_HEIGHT = 480
+BUFFER_WIDTH = 400
+BUFFER_HEIGHT = 240
 BUFFER_BIT_DEPTH = 16
 
 # Adafrui sharp memory display parameters
@@ -41,7 +41,9 @@ def refresh():
         arr = np.frombuffer(fb_mem, dtype=np.uint16).reshape((BUFFER_HEIGHT, BUFFER_WIDTH))
 
         # Downscaling
-        downscaled = arr[grid_y, grid_x]
+        downscaled = arr
+        if BUFFER_WIDTH != WIDTH or BUFFER_HEIGHT != HEIGHT:
+            downscaled = arr[grid_y, grid_x]
 
         # Pack bits row-by-row (axis=1 preserves alignment)
         packed = np.packbits(downscaled, axis=1, bitorder='big')
