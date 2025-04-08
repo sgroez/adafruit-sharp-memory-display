@@ -45,7 +45,7 @@ def refresh():
         if RESIZE:
             downscaled = arr[grid_y, grid_x]
         else:
-            downscaled = arr[:WIDTH, :HEIGHT]
+            downscaled = arr[:HEIGHT, :WIDTH]
 
         # Pack bits row-by-row (axis=1 preserves alignment)
         packed = np.packbits(downscaled, axis=1, bitorder='big')
