@@ -8,7 +8,7 @@ StartLimitBurst=5
 #User=root
 Type=idle
 ExecStartPre=fbset -xres 400 -yres 240
-ExecStart=/usr/bin/python3 /home/username/adafrui-sharp-memory-display
+ExecStart=/usr/bin/python3 /home/username/adafruit-sharp-memory-display
 Restart=on-failure
 RestartSec=3s
 
