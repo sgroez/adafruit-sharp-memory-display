@@ -25,7 +25,7 @@ Python program to render linux /dev/fb0 framebuffer on adafruit 400x240 sharp me
 ### Setup Framebuffer Without Display Attached
 
 - open /boot/firmware/cmdline.txt
-- add ```video=HDMI-A-1:400x240M@30D```
+- add `video=HDMI-A-1:720x480M@30D`
 
 ### Install Adafruit Sharp Memory Display Library
 
