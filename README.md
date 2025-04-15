@@ -11,7 +11,7 @@ Python program to render linux /dev/fb0 framebuffer on adafruit 400x240 sharp me
 | GND     | GND           |
 | CLK     | 11 SCLK       |
 | DI      | 10 MOSI       |
-| CS      | 23            |
+| CS      | 22            |
 
 ## Preparation
 

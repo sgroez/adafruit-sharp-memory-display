@@ -26,7 +26,7 @@ grid_y, grid_x = np.meshgrid(ys, xs, indexing='ij')
 
 # Board pin mapping
 spi = busio.SPI(board.SCK, MOSI=board.MOSI)
-scs = digitalio.DigitalInOut(board.D23)  # inverted chip select
+scs = digitalio.DigitalInOut(board.D22)  # inverted chip select
 
 display = adafruit_sharpmemorydisplay.SharpMemoryDisplay(spi, scs, WIDTH, HEIGHT)
 
